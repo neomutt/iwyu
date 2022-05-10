@@ -13,7 +13,7 @@ for i in "$@"; do
 		-I . \
 		-I color \
 		-I /usr/lib/gcc/x86_64-redhat-linux/12/include \
-		-Xiwyu --mapping_file="$BASE_DIR/imp/color.imp" \
+		-Xiwyu --mapping_file="$BASE_DIR/imp/all.imp" \
 		-Xiwyu --no_comments \
 		-Xiwyu --pch_in_code \
 		"$i"

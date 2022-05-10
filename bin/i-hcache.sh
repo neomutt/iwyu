@@ -15,7 +15,7 @@ for i in "$@"; do
 		-I /usr/include/qdbm \
 		-Xiwyu --pch_in_code \
 		-Xiwyu --no_comments \
-		-Xiwyu --mapping_file="$BASE_DIR/imp/hcache.imp" \
+		-Xiwyu --mapping_file="$BASE_DIR/imp/all.imp" \
 		"$i"
 done
 

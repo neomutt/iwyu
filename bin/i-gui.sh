@@ -16,7 +16,7 @@ for i in "$@"; do
 		-I gui \
 		-I /usr/lib/gcc/x86_64-redhat-linux/12/include \
 		-I /usr/include/qdbm \
-		-Xiwyu --mapping_file="$BASE_DIR/imp/gui.imp" \
+		-Xiwyu --mapping_file="$BASE_DIR/imp/all.imp" \
 		-Xiwyu --no_comments \
 		-Xiwyu --pch_in_code \
 		"$i"

@@ -14,7 +14,7 @@ for i in "$@"; do
 		-I /usr/lib/gcc/x86_64-redhat-linux/12/include \
 		-Xiwyu --pch_in_code \
 		-Xiwyu --no_comments \
-		-Xiwyu --mapping_file="$BASE_DIR/imp/attach.imp" \
+		-Xiwyu --mapping_file="$BASE_DIR/imp/all.imp" \
 		"$i"
 done
 
