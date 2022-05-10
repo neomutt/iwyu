@@ -19,7 +19,3 @@ for i in "$@"; do
 		"$i"
 done
 
-		# -DPKGDATADIR="/usr/share/neomutt" \
-		# -DSYSCONFDIR="/etc" \
-		# -DSIG_ATOMIC_VOLATILE_T=volatile \
-		# -DLOFF_T=long \
