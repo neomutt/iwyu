@@ -12,7 +12,7 @@ for i in "$@"; do
 		-DUSE_INOTIFY \
 		-I . \
 		-I maildir \
-		-I /usr/lib/gcc/x86_64-redhat-linux/11/include \
+		-I /usr/lib/gcc/x86_64-redhat-linux/12/include \
 		-Xiwyu --pch_in_code \
 		-Xiwyu --no_comments \
 		-Xiwyu --mapping_file="$BASE_DIR/imp/maildir.imp" \

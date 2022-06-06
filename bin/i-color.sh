@@ -12,7 +12,7 @@ for i in "$@"; do
 		-DUSE_DEBUG_COLOR \
 		-I . \
 		-I color \
-		-I /usr/lib/gcc/x86_64-redhat-linux/11/include \
+		-I /usr/lib/gcc/x86_64-redhat-linux/12/include \
 		-Xiwyu --mapping_file="$BASE_DIR/imp/color.imp" \
 		-Xiwyu --no_comments \
 		-Xiwyu --pch_in_code \

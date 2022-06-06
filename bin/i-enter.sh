@@ -11,7 +11,7 @@ for i in "$@"; do
 		-DDEBUG \
 		-I . \
 		-I enter \
-		-I /usr/lib/gcc/x86_64-redhat-linux/11/include \
+		-I /usr/lib/gcc/x86_64-redhat-linux/12/include \
 		-Xiwyu --pch_in_code \
 		-Xiwyu --no_comments \
 		-Xiwyu --mapping_file="$BASE_DIR/imp/enter.imp" \

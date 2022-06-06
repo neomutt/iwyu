@@ -12,7 +12,7 @@ for i in "$@"; do
 		-DUSE_DEBUG_GRAPHVIZ \
 		-I . \
 		-I debug \
-		-I /usr/lib/gcc/x86_64-redhat-linux/11/include \
+		-I /usr/lib/gcc/x86_64-redhat-linux/12/include \
 		-I /usr/include/qdbm \
 		-Xiwyu --mapping_file="$BASE_DIR/imp/debug.imp" \
 		-Xiwyu --no_comments \
