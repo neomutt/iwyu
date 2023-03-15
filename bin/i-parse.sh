@@ -9,13 +9,12 @@ for i in "$@"; do
 		-D__EXTENSIONS__ \
 		-DNCURSES_WIDECHAR \
 		-DDEBUG \
-		-DENABLE_NLS \
 		-I . \
-		-I ncrypt \
+		-I parse \
 		-I /usr/lib/gcc/x86_64-redhat-linux/12/include \
 		-Xiwyu --pch_in_code \
 		-Xiwyu --no_comments \
-		-Xiwyu --mapping_file="$BASE_DIR/imp/ncrypt.imp" \
+		-Xiwyu --mapping_file="$BASE_DIR/imp/parse.imp" \
 		"$i"
 done
 
