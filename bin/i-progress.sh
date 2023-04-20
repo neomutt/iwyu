@@ -13,7 +13,7 @@ for i in "$@"; do
 		-DDEBUG \
 		-I . \
 		-I progress \
-		-I /usr/lib/gcc/x86_64-redhat-linux/12/include \
+		-I /usr/lib/gcc/x86_64-redhat-linux/13/include \
 		-I /usr/include/qdbm \
 		-Xiwyu --mapping_file="$BASE_DIR/imp/progress.imp" \
 		-Xiwyu --no_comments \

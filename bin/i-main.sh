@@ -13,7 +13,7 @@ for i in "$@"; do
 		-DUSE_INOTIFY \
 		-I . \
 		-I test \
-		-I /usr/lib/gcc/x86_64-redhat-linux/12/include \
+		-I /usr/lib/gcc/x86_64-redhat-linux/13/include \
 		-I /usr/include/qdbm \
 		-Xiwyu --mapping_file="$BASE_DIR/imp/neomutt.imp" \
 		-Xiwyu --no_comments \
