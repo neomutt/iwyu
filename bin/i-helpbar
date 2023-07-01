@@ -1,0 +1,5 @@
+iwyu $COMMON_OPTS \
+	-I helpbar \
+	-Xiwyu --mapping_file="$BASE_DIR/imp/helpbar.imp" \
+	"$1"
+

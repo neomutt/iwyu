@@ -1,0 +1,5 @@
+iwyu $COMMON_OPTS \
+	-I hcache \
+	-Xiwyu --mapping_file="$BASE_DIR/imp/hcache.imp" \
+	"$1"
+

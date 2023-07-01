@@ -1,0 +1,5 @@
+iwyu $COMMON_OPTS \
+	-I alias \
+	-Xiwyu --mapping_file="$BASE_DIR/imp/alias.imp" \
+	"$1"
+

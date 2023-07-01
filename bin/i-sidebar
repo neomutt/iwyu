@@ -1,0 +1,5 @@
+iwyu $COMMON_OPTS \
+	-I sidebar \
+	-Xiwyu --mapping_file="$BASE_DIR/imp/sidebar.imp" \
+	"$1"
+

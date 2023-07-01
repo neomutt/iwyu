@@ -1,0 +1,6 @@
+iwyu $COMMON_OPTS \
+	-DENABLE_NLS \
+	-I ncrypt \
+	-Xiwyu --mapping_file="$BASE_DIR/imp/ncrypt.imp" \
+	"$1"
+

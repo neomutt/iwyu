@@ -1,0 +1,5 @@
+iwyu $COMMON_OPTS \
+	-I history \
+	-Xiwyu --mapping_file="$BASE_DIR/imp/history.imp" \
+	"$1"
+

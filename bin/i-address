@@ -1,0 +1,5 @@
+iwyu $COMMON_OPTS \
+	-I address \
+	-Xiwyu --mapping_file="$BASE_DIR/imp/address.imp" \
+	"$1"
+

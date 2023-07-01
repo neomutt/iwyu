@@ -1,0 +1,5 @@
+iwyu $COMMON_OPTS \
+	-I notmuch \
+	-Xiwyu --mapping_file="$BASE_DIR/imp/notmuch.imp" \
+	"$1"
+

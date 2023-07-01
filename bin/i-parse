@@ -1,0 +1,5 @@
+iwyu $COMMON_OPTS \
+	-I parse \
+	-Xiwyu --mapping_file="$BASE_DIR/imp/parse.imp" \
+	"$1"
+

@@ -1,0 +1,5 @@
+iwyu $COMMON_OPTS \
+	-I postpone \
+	-Xiwyu --mapping_file="$BASE_DIR/imp/postpone.imp" \
+	"$1"
+

@@ -1,0 +1,7 @@
+iwyu $COMMON_OPTS \
+	-DUSE_LUA \
+	-DUSE_INOTIFY \
+	-I test \
+	-Xiwyu --mapping_file="$BASE_DIR/imp/neomutt.imp" \
+	"$1"
+

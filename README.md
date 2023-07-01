@@ -12,15 +12,16 @@ It also helps to show the dependencies of a file.
 This repo contains some crude scripts and config files for NeoMutt.
 
 The scripts contain a lot of references that are probably only valid for me,
-using Fedora 35.  Improvements are welcome.
+using Fedora 38.  Improvements are welcome.
 
 ## Running
 
-To check the project, first configure NeoMutt, then the main script:
+To check the project, first configure NeoMutt, then run the main script with the
+source you wish to check:
 
 ```sh
 ./configure
-iwyu.sh
+iwyu.sh mutt/*.[ch]
 ```
 
 ## Known Limitations

@@ -1,0 +1,5 @@
+iwyu $COMMON_OPTS \
+	-I pop \
+	-Xiwyu --mapping_file="$BASE_DIR/imp/pop.imp" \
+	"$1"
+

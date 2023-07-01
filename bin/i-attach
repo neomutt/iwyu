@@ -1,0 +1,5 @@
+iwyu $COMMON_OPTS \
+	-I attach \
+	-Xiwyu --mapping_file="$BASE_DIR/imp/attach.imp" \
+	"$1"
+

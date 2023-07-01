@@ -1,0 +1,8 @@
+[ "$1" = "mutt_curses.h" ] && continue
+
+iwyu $COMMON_OPTS \
+	-DUSE_INOTIFY \
+	-I gui \
+	-Xiwyu --mapping_file="$BASE_DIR/imp/gui.imp" \
+	"$1"
+

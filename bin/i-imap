@@ -1,0 +1,6 @@
+iwyu $COMMON_OPTS \
+	-DUSE_SASL_GNU \
+	-I imap \
+	-Xiwyu --mapping_file="$BASE_DIR/imp/imap.imp" \
+	"$1"
+

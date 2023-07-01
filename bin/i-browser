@@ -1,0 +1,5 @@
+iwyu $COMMON_OPTS \
+	-I browser \
+	-Xiwyu --mapping_file="$BASE_DIR/imp/browser.imp" \
+	"$1"
+

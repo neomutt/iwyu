@@ -1,0 +1,5 @@
+iwyu $COMMON_OPTS \
+	-I pattern \
+	-Xiwyu --mapping_file="$BASE_DIR/imp/pattern.imp" \
+	"$1"
+
