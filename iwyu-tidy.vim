@@ -1,3 +1,4 @@
+syn clear
 %!ansifilter
 %s/$//e
 g/has correct/de

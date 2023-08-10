@@ -49,6 +49,7 @@ for i in "$@"; do
 		email/*.[ch])      source "$BASE_DIR/bin/i-email"     "$i";;
 		enter/*.[ch])      source "$BASE_DIR/bin/i-enter"     "$i";;
 		envelope/*.[ch])   source "$BASE_DIR/bin/i-envelope"  "$i";;
+		expando/*.[ch])    source "$BASE_DIR/bin/i-expando"   "$i";;
 		gui/*.[ch])        source "$BASE_DIR/bin/i-gui"       "$i";;
 		hcache/*.[ch])     source "$BASE_DIR/bin/i-hcache"    "$i";;
 		helpbar/*.[ch])    source "$BASE_DIR/bin/i-helpbar"   "$i";;

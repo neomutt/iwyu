@@ -17,6 +17,7 @@
   { include: [ '@"email/.*"',                       private, '"email/lib.h"',        public ] },
   { include: [ '@"enter/.*"',                       private, '"enter/lib.h"',        public ] },
   { include: [ '@"envelope/.*"',                    private, '"envelope/lib.h"',     public ] },
+  { include: [ '@"expando/.*"',                     private, '"expando/lib.h"',      public ] },
   { include: [ '@"gui/.*"',                         private, '"gui/lib.h"',          public ] },
   { include: [ '@"hcache/.*"',                      private, '"hcache/lib.h"',       public ] },
   { include: [ '@"helpbar/.*"',                     private, '"helpbar/lib.h"',      public ] },
