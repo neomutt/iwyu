@@ -26,8 +26,6 @@ OPTS+=("-D__EXTENSIONS__")
 OPTS+=("-DNCURSES_WIDECHAR")
 OPTS+=("-DDEBUG")
 OPTS+=("-I .")
-OPTS+=("-I /usr/include/qdbm")
-OPTS+=("-I /usr/lib/gcc/x86_64-redhat-linux/13/include")
 OPTS+=("-Xiwyu --pch_in_code")
 OPTS+=("-Xiwyu --no_comments")
 
