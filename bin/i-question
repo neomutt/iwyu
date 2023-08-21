@@ -1,4 +1,4 @@
-iwyu $COMMON_OPTS \
+$IWYU $COMMON_OPTS \
 	-I question \
 	-Xiwyu --mapping_file="$BASE_DIR/imp/question.imp" \
 	"$1"

@@ -1,4 +1,4 @@
-iwyu $COMMON_OPTS \
+$IWYU $COMMON_OPTS \
 	-I email \
 	-Xiwyu --mapping_file="$BASE_DIR/imp/email.imp" \
 	"$1"

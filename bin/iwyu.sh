@@ -2,6 +2,13 @@
 
 set -o nounset	# set -u
 
+: "${IWYU:=iwyu}"
+if ! command -v "${IWYU}" &> /dev/null
+then
+    echo "iwyu command not found in PATH. You can specify an alternate location with IWYU=/path/to/iwyu."
+    exit 1
+fi
+
 if [ ! -f config.h ]; then
 	echo "config.h is missing"
 	exit 1

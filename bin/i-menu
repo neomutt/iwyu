@@ -1,4 +1,4 @@
-iwyu $COMMON_OPTS \
+$IWYU $COMMON_OPTS \
 	-I menu \
 	-Xiwyu --mapping_file="$BASE_DIR/imp/menu.imp" \
 	"$1"

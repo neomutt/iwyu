@@ -1,4 +1,4 @@
-iwyu $COMMON_OPTS \
+$IWYU $COMMON_OPTS \
 	-I compose \
 	-Xiwyu --mapping_file="$BASE_DIR/imp/compose.imp" \
 	"$1"

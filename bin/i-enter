@@ -1,4 +1,4 @@
-iwyu $COMMON_OPTS \
+$IWYU $COMMON_OPTS \
 	-I enter \
 	-Xiwyu --mapping_file="$BASE_DIR/imp/enter.imp" \
 	"$1"

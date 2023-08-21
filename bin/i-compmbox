@@ -1,4 +1,4 @@
-iwyu $COMMON_OPTS \
+$IWYU $COMMON_OPTS \
 	-I compmbox \
 	-Xiwyu --mapping_file="$BASE_DIR/imp/compmbox.imp" \
 	"$1"

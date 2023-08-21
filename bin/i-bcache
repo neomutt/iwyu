@@ -1,4 +1,4 @@
-iwyu $COMMON_OPTS \
+$IWYU $COMMON_OPTS \
 	-I bcache \
 	-Xiwyu --mapping_file="$BASE_DIR/imp/bcache.imp" \
 	"$1"

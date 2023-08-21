@@ -1,4 +1,4 @@
-iwyu $COMMON_OPTS \
+$IWYU $COMMON_OPTS \
 	-DUSE_INOTIFY \
 	-I index \
 	-Xiwyu --mapping_file="$BASE_DIR/imp/index.imp" \

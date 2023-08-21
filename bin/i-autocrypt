@@ -1,4 +1,4 @@
-iwyu $COMMON_OPTS \
+$IWYU $COMMON_OPTS \
 	-I autocrypt \
 	-Xiwyu --mapping_file="$BASE_DIR/imp/autocrypt.imp" \
 	"$1"

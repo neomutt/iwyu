@@ -1,4 +1,4 @@
-iwyu $COMMON_OPTS \
+$IWYU $COMMON_OPTS \
 	-I pager \
 	-Xiwyu --mapping_file="$BASE_DIR/imp/pager.imp" \
 	"$1"

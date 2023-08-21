@@ -1,4 +1,4 @@
-iwyu $COMMON_OPTS \
+$IWYU $COMMON_OPTS \
 	-DUSE_DEBUG_COLOR \
 	-I color \
 	-Xiwyu --mapping_file="$BASE_DIR/imp/color.imp" \
