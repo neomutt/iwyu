@@ -7,4 +7,5 @@
 
   { ref: "glibc.imp" },
   { ref: "curses.imp" },
+  { ref: "sys.imp" },
 ]

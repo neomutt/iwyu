@@ -1,0 +1,12 @@
+[
+  { include: [ '<sys/errno.h>',              private, '<errno.h>',           public ] },
+  { include: [ '<sys/fcntl.h>',              private, '<fcntl.h>',           public ] },
+  { include: [ '<sys/signal.h>',             private, '<signal.h>',          public ] },
+  { include: [ '<sys/syslimits.h>',          private, '<limits.h>',          public ] },
+  { include: [ '<sys/fcntl.h>',              private, '<fcntl.h>',           public ] },
+  { include: [ '<sys/ttycom.h>',             private, '<termios.h>',         public ] },
+  { include: [ '<arm/limits.h>',             private, '<limits.h>',          public ] },
+  { include: [ '<_ctype.h>',                 private, '<ctype.h>',           public ] },
+  { include: [ '<_wctype.h>',                private, '<wctype.h>',          public ] },
+  { include: [ '<_xlocale.h>',               private, '<xlocale.h>',         public ] },
+]

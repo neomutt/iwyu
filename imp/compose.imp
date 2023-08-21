@@ -31,4 +31,5 @@
   { ref: "glibc.imp" },
   { ref: "curses.imp" },
   { ref: "regex.imp" },
+  { ref: "sys.imp" },
 ]
