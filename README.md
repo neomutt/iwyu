@@ -16,11 +16,11 @@ using Fedora 38.  Improvements are welcome.
 
 ## Running
 
-To check the project, first configure NeoMutt, then run the main script with the
-source you wish to check:
+To check the project, first configure + build NeoMutt with a compilation database,
+then run the main script with the source you wish to check:
 
 ```sh
-./configure
+./configure --compile-commands && make
 iwyu.sh mutt/*.[ch]
 ```
 
