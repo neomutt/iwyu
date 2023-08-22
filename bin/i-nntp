@@ -1,5 +1,0 @@
-$IWYU $COMMON_OPTS \
-	-I nntp \
-	-Xiwyu --mapping_file="$BASE_DIR/imp/nntp.imp" \
-	"$1"
-

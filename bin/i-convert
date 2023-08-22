@@ -1,5 +1,0 @@
-$IWYU $COMMON_OPTS \
-	-I convert \
-	-Xiwyu --mapping_file="$BASE_DIR/imp/convert.imp" \
-	"$1"
-

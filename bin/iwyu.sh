@@ -1,86 +1,78 @@
 #!/bin/bash
 
-set -o nounset	# set -u
+set -o nounset # set -u
 
-: "${IWYU:=iwyu}"
-if ! command -v "${IWYU}" &> /dev/null
-then
-    echo "iwyu command not found in PATH. You can specify an alternate location with IWYU=/path/to/iwyu."
+: "${IWYU_TOOL:=iwyu_tool.py}"
+if ! command -v "${IWYU_TOOL}" &>/dev/null; then
+    echo "iwyu_tool.py command not found in PATH. You can specify an alternate location with IWYU_TOOL=/path/to/iwyu_tool.py"
     exit 1
 fi
 
 if [ ! -f config.h ]; then
-	echo "config.h is missing"
-	exit 1
+    echo "config.h is missing"
+    exit 1
 fi
 
 if [ ! -f hcache/hcversion.h ]; then
-	echo "hcache/hcversion.h is missing"
-	exit 1
+    echo "hcache/hcversion.h is missing"
+    exit 1
 fi
 
-OPTS=()
-OPTS+=("-D_ALL_SOURCE=1")
-OPTS+=("-D_GNU_SOURCE=1")
-OPTS+=("-D__EXTENSIONS__")
-OPTS+=("-DNCURSES_WIDECHAR")
-OPTS+=("-DDEBUG")
-OPTS+=("-I .")
-OPTS+=("-Xiwyu --pch_in_code")
-OPTS+=("-Xiwyu --no_comments")
+TOOL_OPTS="-p ."
+IWYU_OPTS="-Xiwyu --pch_in_code -Xiwyu --no_comments"
 
-COMMON_OPTS="${OPTS[@]}"
 BASE_DIR="${0%bin/*}"
 BASE_DIR="${BASE_DIR%/}"
 
 for i in "$@"; do
-	case "$i" in
-		address/*.[ch])    source "$BASE_DIR/bin/i-address"   "$i";;
-		alias/*.[ch])      source "$BASE_DIR/bin/i-alias"     "$i";;
-		attach/*.[ch])     source "$BASE_DIR/bin/i-attach"    "$i";;
-		autocrypt/*.[ch])  source "$BASE_DIR/bin/i-autocrypt" "$i";;
-		bcache/*.[ch])     source "$BASE_DIR/bin/i-bcache"    "$i";;
-		browser/*.[ch])    source "$BASE_DIR/bin/i-browser"   "$i";;
-		color/*.[ch])      source "$BASE_DIR/bin/i-color"     "$i";;
-		complete/*.[ch])   source "$BASE_DIR/bin/i-complete"  "$i";;
-		compmbox/*.[ch])   source "$BASE_DIR/bin/i-compmbox"  "$i";;
-		compose/*.[ch])    source "$BASE_DIR/bin/i-compose"   "$i";;
-		compress/*.[ch])   source "$BASE_DIR/bin/i-compress"  "$i";;
-		config/*.[ch])     source "$BASE_DIR/bin/i-config"    "$i";;
-		conn/*.[ch])       source "$BASE_DIR/bin/i-conn"      "$i";;
-		convert/*.[ch])    source "$BASE_DIR/bin/i-convert"   "$i";;
-		core/*.[ch])       source "$BASE_DIR/bin/i-core"      "$i";;
-		debug/*.[ch])      source "$BASE_DIR/bin/i-debug"     "$i";;
-		email/*.[ch])      source "$BASE_DIR/bin/i-email"     "$i";;
-		enter/*.[ch])      source "$BASE_DIR/bin/i-enter"     "$i";;
-		envelope/*.[ch])   source "$BASE_DIR/bin/i-envelope"  "$i";;
-		expando/*.[ch])    source "$BASE_DIR/bin/i-expando"   "$i";;
-		gui/*.[ch])        source "$BASE_DIR/bin/i-gui"       "$i";;
-		hcache/*.[ch])     source "$BASE_DIR/bin/i-hcache"    "$i";;
-		helpbar/*.[ch])    source "$BASE_DIR/bin/i-helpbar"   "$i";;
-		history/*.[ch])    source "$BASE_DIR/bin/i-history"   "$i";;
-		imap/*.[ch])       source "$BASE_DIR/bin/i-imap"      "$i";;
-		index/*.[ch])      source "$BASE_DIR/bin/i-index"     "$i";;
-		maildir/*.[ch])    source "$BASE_DIR/bin/i-maildir"   "$i";;
-		mbox/*.[ch])       source "$BASE_DIR/bin/i-mbox"      "$i";;
-		menu/*.[ch])       source "$BASE_DIR/bin/i-menu"      "$i";;
-		mixmaster/*.[ch])  source "$BASE_DIR/bin/i-mixmaster" "$i";;
-		mutt/*.[ch])       source "$BASE_DIR/bin/i-mutt"      "$i";;
-		ncrypt/*.[ch])     source "$BASE_DIR/bin/i-ncrypt"    "$i";;
-		nntp/*.[ch])       source "$BASE_DIR/bin/i-nntp"      "$i";;
-		notmuch/*.[ch])    source "$BASE_DIR/bin/i-notmuch"   "$i";;
-		pager/*.[ch])      source "$BASE_DIR/bin/i-pager"     "$i";;
-		parse/*.[ch])      source "$BASE_DIR/bin/i-parse"     "$i";;
-		pattern/*.[ch])    source "$BASE_DIR/bin/i-pattern"   "$i";;
-		pop/*.[ch])        source "$BASE_DIR/bin/i-pop"       "$i";;
-		postpone/*.[ch])   source "$BASE_DIR/bin/i-postpone"  "$i";;
-		progress/*.[ch])   source "$BASE_DIR/bin/i-progress"  "$i";;
-		question/*.[ch])   source "$BASE_DIR/bin/i-question"  "$i";;
-		send/*.[ch])       source "$BASE_DIR/bin/i-send"      "$i";;
-		sidebar/*.[ch])    source "$BASE_DIR/bin/i-sidebar"   "$i";;
-		store/*.[ch])      source "$BASE_DIR/bin/i-store"     "$i";;
-		*.[ch])            source "$BASE_DIR/bin/i-main"      "$i";;
-		*)                 echo "unknown: $i";;
-	esac
+    MAPPING=""
+    case "$i" in
+        address/*.[ch]) MAPPING="address.imp" ;;
+        alias/*.[ch]) MAPPING="alias.imp" ;;
+        attach/*.[ch]) MAPPING="attach.imp" ;;
+        autocrypt/*.[ch]) MAPPING="autocrypt.imp" ;;
+        bcache/*.[ch]) MAPPING="bcache.imp" ;;
+        browser/*.[ch]) MAPPING="browser.imp" ;;
+        color/*.[ch]) MAPPING="color.imp" ;;
+        complete/*.[ch]) MAPPING="complete.imp" ;;
+        compmbox/*.[ch]) MAPPING="compmbox.imp" ;;
+        compose/*.[ch]) MAPPING="compose.imp" ;;
+        compress/*.[ch]) MAPPING="compress.imp" ;;
+        config/*.[ch]) MAPPING="config.imp" ;;
+        conn/*.[ch]) MAPPING="conn.imp" ;;
+        convert/*.[ch]) MAPPING="convert.imp" ;;
+        core/*.[ch]) MAPPING="core.imp" ;;
+        debug/*.[ch]) MAPPING="debug.imp" ;;
+        email/*.[ch]) MAPPING="email.imp" ;;
+        enter/*.[ch]) MAPPING="enter.imp" ;;
+        envelope/*.[ch]) MAPPING="envelope.imp" ;;
+        expando/*.[ch]) MAPPING="expando.imp" ;;
+        gui/*.[ch]) MAPPING="gui.imp" ;;
+        hcache/*.[ch]) MAPPING="hcache.imp" ;;
+        helpbar/*.[ch]) MAPPING="helpbar.imp" ;;
+        history/*.[ch]) MAPPING="history.imp" ;;
+        imap/*.[ch]) MAPPING="imap.imp" ;;
+        index/*.[ch]) MAPPING="index.imp" ;;
+        maildir/*.[ch]) MAPPING="maildir.imp" ;;
+        mbox/*.[ch]) MAPPING="mbox.imp" ;;
+        menu/*.[ch]) MAPPING="menu.imp" ;;
+        mixmaster/*.[ch]) MAPPING="mixmaster.imp" ;;
+        mutt/*.[ch]) MAPPING="mutt.imp" ;;
+        ncrypt/*.[ch]) MAPPING="ncrypt.imp" ;;
+        nntp/*.[ch]) MAPPING="nntp.imp" ;;
+        notmuch/*.[ch]) MAPPING="notmuch.imp" ;;
+        pager/*.[ch]) MAPPING="pager.imp" ;;
+        parse/*.[ch]) MAPPING="parse.imp" ;;
+        pattern/*.[ch]) MAPPING="pattern.imp" ;;
+        pop/*.[ch]) MAPPING="pop.imp" ;;
+        postpone/*.[ch]) MAPPING="postpone.imp" ;;
+        progress/*.[ch]) MAPPING="progress.imp" ;;
+        question/*.[ch]) MAPPING="question.imp" ;;
+        send/*.[ch]) MAPPING="send.imp" ;;
+        sidebar/*.[ch]) MAPPING="sidebar.imp" ;;
+        store/*.[ch]) MAPPING="store.imp" ;;
+        *.[ch]) MAPPING="neomutt.imp" ;;
+        *) echo "unknown: $i" ;;
+    esac
+    $IWYU_TOOL $TOOL_OPTS "$i" -- $IWYU_OPTS -Xiwyu --mapping_file="$BASE_DIR/imp/$MAPPING"
 done
-

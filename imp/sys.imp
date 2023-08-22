@@ -9,4 +9,5 @@
   { include: [ '<_ctype.h>',                 private, '<ctype.h>',           public ] },
   { include: [ '<_wctype.h>',                private, '<wctype.h>',          public ] },
   { include: [ '<_xlocale.h>',               private, '<xlocale.h>',         public ] },
+  { include: [ '<sys/_types/_mbstate_t.h>',  private, '<wchar.h>',           public ] },
 ]

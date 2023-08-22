@@ -1,6 +1,0 @@
-$IWYU $COMMON_OPTS \
-	-DUSE_DEBUG_GRAPHVIZ \
-	-I debug \
-	-Xiwyu --mapping_file="$BASE_DIR/imp/debug.imp" \
-	"$1"
-
