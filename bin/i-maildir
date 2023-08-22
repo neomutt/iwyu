@@ -1,6 +1,0 @@
-$IWYU $COMMON_OPTS \
-	-DUSE_INOTIFY \
-	-I maildir \
-	-Xiwyu --mapping_file="$BASE_DIR/imp/maildir.imp" \
-	"$1"
-

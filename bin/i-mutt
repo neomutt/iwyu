@@ -1,6 +1,0 @@
-$IWYU $COMMON_OPTS \
-	-D_STRING_ARCH_unaligned \
-	-I mutt \
-	-Xiwyu --mapping_file="$BASE_DIR/imp/mutt.imp" \
-	"$1"
-

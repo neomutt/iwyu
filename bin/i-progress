@@ -1,5 +1,0 @@
-$IWYU $COMMON_OPTS \
-	-I progress \
-	-Xiwyu --mapping_file="$BASE_DIR/imp/progress.imp" \
-	"$1"
-

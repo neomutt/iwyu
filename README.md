@@ -9,19 +9,28 @@ It also helps to show the dependencies of a file.
 **iwyu** uses [clang](https://clang.llvm.org/) to create an
 [AST](https://en.wikipedia.org/wiki/Abstract_syntax_tree) for the code.
 
-This repo contains some crude scripts and config files for NeoMutt.
+## Usage
 
-The scripts contain a lot of references that are probably only valid for me,
-using Fedora 38.  Improvements are welcome.
-
-## Running
-
-To check the project, first configure + build NeoMutt with a compilation database,
-then run the main script with the source you wish to check:
-
+Configure + build NeoMutt with a compilation database.
 ```sh
 ./configure --compile-commands && make
-iwyu.sh mutt/*.[ch]
+```
+
+**!** Some build systems output a `compilation_commands.json` with a trailing comma on the last line which is invalid JSON. **!**
+
+The fix is to simply remove the trailing comma, here's a shell oneliner to do that:
+```sh
+tac compile_commands.json | sed '2 s/.$//' | tac > compile_commands.json.tmp && mv compile_commands.json.tmp compile_commands.json
+```
+
+Then run the main script with the source you wish to check:
+```sh
+iwyu.sh mutt/*.[c]
+```
+
+Or with all files in the compilation database:
+```sh
+cat compile_commands.json| jq -r '.[] | .file' | xargs ../iwyu/bin/iwyu.sh
 ```
 
 ## Known Limitations

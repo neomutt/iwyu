@@ -1,5 +1,0 @@
-$IWYU $COMMON_OPTS \
-	-I core \
-	-Xiwyu --mapping_file="$BASE_DIR/imp/core.imp" \
-	"$1"
-

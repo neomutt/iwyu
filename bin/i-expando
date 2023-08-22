@@ -1,6 +1,0 @@
-$IWYU $COMMON_OPTS \
-	-D_STRING_ARCH_unaligned \
-	-I expando \
-	-Xiwyu --mapping_file="$BASE_DIR/imp/expando.imp" \
-	"$1"
-
