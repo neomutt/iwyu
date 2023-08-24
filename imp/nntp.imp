@@ -1,6 +1,7 @@
 [
   # Include one library header rather than the individual headers.
   { include: [ '@"address/.*"',                     private, '"address/lib.h"',      public ] },
+  { include: [ '@"attach/.*"',                      private, '"attach/lib.h"',       public ] },
   { include: [ '@"config/.*"',                      private, '"config/lib.h"',       public ] },
   { include: [ '@"conn/.*"',                        private, '"conn/lib.h"',         public ] },
   { include: [ '@"core/.*"',                        private, '"core/lib.h"',         public ] },
