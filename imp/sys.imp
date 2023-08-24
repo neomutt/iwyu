@@ -5,8 +5,13 @@
   { include: [ '<sys/signal.h>',             private, '<signal.h>',          public ] },
   { include: [ '<sys/syslimits.h>',          private, '<limits.h>',          public ] },
   { include: [ '<sys/ttycom.h>',             private, '<termios.h>',         public ] },
+  { include: [ '<sys/unistd.h>',             private, '<unistd.h>',          public ] },
   { include: [ '<sys/_types/_mbstate_t.h>',  private, '<wchar.h>',           public ] },
+  { include: [ '<sys/_types/_s_ifmt.h>',     private, '<sys/stat.h>',        public ] },
+  { include: [ '<sys/_types/_wint_t.h>',     private, '<wctype.h>',          public ] },
+  { include: [ '<sys/_types/_seek_set.h>',   private, '<stdio.h>',           public ] },
   { include: [ '<_ctype.h>',                 private, '<ctype.h>',           public ] },
   { include: [ '<_wctype.h>',                private, '<wctype.h>',          public ] },
+  { include: [ '<__wctype.h>',               private, '<wctype.h>',          public ] },
   { include: [ '<_xlocale.h>',               private, '<xlocale.h>',         public ] },
 ]
