@@ -4,6 +4,7 @@
   { include: [ '@"alias/.*"',                       private, '"alias/lib.h"',        public ] },
   { include: [ '@"autocrypt/.*"',                   private, '"autocrypt/lib.h"',    public ] },
   { include: [ '@"bcache/.*"',                      private, '"bcache/lib.h"',       public ] },
+  { include: [ '@"color/.*"',                       private, '"color/lib.h"',        public ] },
   { include: [ '@"compmbox/.*"',                    private, '"compmbox/lib.h"',     public ] },
   { include: [ '@"compress/.*"',                    private, '"compress/lib.h"',     public ] },
   { include: [ '@"config/.*"',                      private, '"config/lib.h"',       public ] },

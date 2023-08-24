@@ -13,7 +13,6 @@
   { include: [ '@"email/.*"',                       private, '"email/lib.h"',        public ] },
   { include: [ '@"gui/.*"',                         private, '"gui/lib.h"',          public ] },
   { include: [ '@"hcache/.*"',                      private, '"hcache/lib.h"',       public ] },
-  { include: [ '@"history/.*"',                     private, '"history/lib.h"',      public ] },
   { include: [ '@"imap/.*"',                        private, '"imap/lib.h"',         public ] },
   { include: [ '@"index/.*"',                       private, '"index/lib.h"',        public ] },
   { include: [ '@"maildir/.*"',                     private, '"maildir/lib.h"',      public ] },

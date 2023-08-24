@@ -2,8 +2,10 @@
   # Include one library header rather than the individual headers.
   { include: [ '@"address/.*"',                     private, '"address/lib.h"',      public ] },
   { include: [ '@"alias/.*"',                       private, '"alias/lib.h"',        public ] },
+  { include: [ '@"attach/.*"',                      private, '"attach/lib.h"',       public ] },
   { include: [ '@"autocrypt/.*"',                   private, '"autocrypt/lib.h"',    public ] },
   { include: [ '@"bcache/.*"',                      private, '"bcache/lib.h"',       public ] },
+  { include: [ '@"color/.*"',                       private, '"color/lib.h"',        public ] },
   { include: [ '@"compmbox/.*"',                    private, '"compmbox/lib.h"',     public ] },
   { include: [ '@"compress/.*"',                    private, '"compress/lib.h"',     public ] },
   { include: [ '@"config/.*"',                      private, '"config/lib.h"',       public ] },
@@ -24,6 +26,7 @@
   { include: [ '@"nntp/.*"',                        private, '"nntp/lib.h"',         public ] },
   { include: [ '@"notmuch/.*"',                     private, '"notmuch/lib.h"',      public ] },
   { include: [ '@"pop/.*"',                         private, '"pop/lib.h"',          public ] },
+  { include: [ '@"send/.*"',                        private, '"send/lib.h"',         public ] },
   { include: [ '@"store/.*"',                       private, '"store/lib.h"',        public ] },
 
   { symbol: [ "wchar_t",                            private, "<wchar.h>",            public ] },

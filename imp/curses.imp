@@ -1,9 +1,10 @@
 [
   # Include our header, rather than the system header.
+  { include: [ '"ncursesw/curses.h"',               private, '"gui/lib.h"',          public ] },
   { include: [ '<curses.h>',                        private, '"gui/lib.h"',          public ] },
+  { include: [ '<ncurses.h>',                       private, '"gui/lib.h"',          public ] },
   { include: [ '<ncursesw/ncurses.h>',              private, '"gui/lib.h"',          public ] },
   { include: [ '<ncursesw/term.h>',                 private, '"gui/lib.h"',          public ] },
-  { include: [ '"ncursesw/curses.h"',               private, '"gui/lib.h"',          public ] },
 
   # Tell IWYU where to find some symbols
   { symbol: [ "A_BLINK",                            private, '"gui/lib.h"',          public ] },
