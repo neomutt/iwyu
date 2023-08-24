@@ -16,21 +16,14 @@ Configure + build NeoMutt with a compilation database.
 ./configure --compile-commands && make
 ```
 
-**!** Some build systems output a `compilation_commands.json` with a trailing comma on the last line which is invalid JSON. **!**
-
-The fix is to simply remove the trailing comma, here's a shell oneliner to do that:
-```sh
-tac compile_commands.json | sed '2 s/.$//' | tac > compile_commands.json.tmp && mv compile_commands.json.tmp compile_commands.json
-```
-
 Then run the main script with the source you wish to check:
 ```sh
-iwyu.sh mutt/*.[c]
+iwyu.sh mutt/*.[ch]
 ```
 
 Or with all files in the compilation database:
 ```sh
-cat compile_commands.json| jq -r '.[] | .file' | xargs ../iwyu/bin/iwyu.sh
+tac compile_commands.json | sed '2 s/.$//' | tac | jq -r '.[] | .file' | xargs ../iwyu/bin/iwyu.sh
 ```
 
 ## Known Limitations

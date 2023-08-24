@@ -1,10 +1,10 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 set -o nounset # set -u
 
-: "${IWYU_TOOL:=iwyu_tool.py}"
-if ! command -v "${IWYU_TOOL}" &>/dev/null; then
-    echo "iwyu_tool.py command not found in PATH. You can specify an alternate location with IWYU_TOOL=/path/to/iwyu_tool.py"
+: "${IWYU:=iwyu}"
+if ! command -v "${IWYU}" &>/dev/null; then
+    echo "iwyu command not found in PATH. You can specify an alternate location with IWYU=/path/to/iwyu"
     exit 1
 fi
 
@@ -18,7 +18,13 @@ if [ ! -f hcache/hcversion.h ]; then
     exit 1
 fi
 
-TOOL_OPTS="-p ."
+if [ ! -f compile_commands.json ]; then
+    echo "compile_commands.json is missing"
+    exit 1
+fi
+
+# here be dragons ;-)
+COMPILE_OPTS=$(grep -w "main.c" compile_commands.json | sed 's/\(.*\),/[\1]/' | jq -r '.[].arguments as $args | $args | map(.=="-D" or .=="-I") | indices(true) | map($args[.] + " " + $args[.+1]) | sort | unique | join(" ")')
 IWYU_OPTS="-Xiwyu --pch_in_code -Xiwyu --no_comments"
 
 BASE_DIR="${0%bin/*}"
@@ -74,5 +80,5 @@ for i in "$@"; do
         *.[ch]) MAPPING="neomutt.imp" ;;
         *) echo "unknown: $i" ;;
     esac
-    $IWYU_TOOL $TOOL_OPTS "$i" -- $IWYU_OPTS -Xiwyu --mapping_file="$BASE_DIR/imp/$MAPPING"
+    $IWYU $COMPILE_OPTS $IWYU_OPTS -Xiwyu --mapping_file="$BASE_DIR/imp/$MAPPING" "$i"
 done
