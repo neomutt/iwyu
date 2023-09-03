@@ -1,7 +1,9 @@
 [
   # Include one library header rather than the individual headers.
   { include: [ '@"attach/.*"',                      private, '"attach/lib.h"',       public ] },
+  { include: [ '@"color/.*"',                       private, '"color/lib.h"',        public ] },
   { include: [ '@"complete/.*"',                    private, '"complete/lib.h"',     public ] },
+  { include: [ '@"config/.*"',                      private, '"config/lib.h"',       public ] },
   { include: [ '@"core/.*"',                        private, '"core/lib.h"',         public ] },
   { include: [ '@"email/.*"',                       private, '"email/lib.h"',        public ] },
   { include: [ '@"gui/.*"',                         private, '"gui/lib.h"',          public ] },
