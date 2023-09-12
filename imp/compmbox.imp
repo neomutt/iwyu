@@ -11,6 +11,7 @@
   { include: [ '@"core/.*"',                        private, '"core/lib.h"',         public ] },
   { include: [ '@"debug/.*"',                       private, '"debug/lib.h"',        public ] },
   { include: [ '@"email/.*"',                       private, '"email/lib.h"',        public ] },
+  { include: [ '@"expando/.*"',                     private, '"expando/lib.h"',      public ] },
   { include: [ '@"gui/.*"',                         private, '"gui/lib.h"',          public ] },
   { include: [ '@"hcache/.*"',                      private, '"hcache/lib.h"',       public ] },
   { include: [ '@"history/.*"',                     private, '"history/lib.h"',      public ] },
