@@ -49,8 +49,8 @@ for i in "$@"; do
         convert/*.[ch]) MAPPING="convert.imp" ;;
         core/*.[ch]) MAPPING="core.imp" ;;
         debug/*.[ch]) MAPPING="debug.imp" ;;
+        editor/*.[ch]) MAPPING="editor.imp" ;;
         email/*.[ch]) MAPPING="email.imp" ;;
-        enter/*.[ch]) MAPPING="enter.imp" ;;
         envelope/*.[ch]) MAPPING="envelope.imp" ;;
         expando/*.[ch]) MAPPING="expando.imp" ;;
         gui/*.[ch]) MAPPING="gui.imp" ;;
