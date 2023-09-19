@@ -59,6 +59,7 @@ for i in "$@"; do
         history/*.[ch]) MAPPING="history.imp" ;;
         imap/*.[ch]) MAPPING="imap.imp" ;;
         index/*.[ch]) MAPPING="index.imp" ;;
+        key/*.[ch]) MAPPING="key.imp" ;;
         maildir/*.[ch]) MAPPING="maildir.imp" ;;
         mbox/*.[ch]) MAPPING="mbox.imp" ;;
         menu/*.[ch]) MAPPING="menu.imp" ;;
