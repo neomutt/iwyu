@@ -9,6 +9,7 @@
   # Tell IWYU where to find some symbols
   { symbol: [ "A_BLINK",                            private, '"gui/lib.h"',          public ] },
   { symbol: [ "A_BOLD",                             private, '"gui/lib.h"',          public ] },
+  { symbol: [ "A_ITALIC",                           private, '"gui/lib.h"',          public ] },
   { symbol: [ "A_NORMAL",                           private, '"gui/lib.h"',          public ] },
   { symbol: [ "A_REVERSE",                          private, '"gui/lib.h"',          public ] },
   { symbol: [ "A_STANDOUT",                         private, '"gui/lib.h"',          public ] },
