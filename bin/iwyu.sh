@@ -63,6 +63,7 @@ for i in "$@"; do
         maildir/*.[ch]) MAPPING="maildir.imp" ;;
         mbox/*.[ch]) MAPPING="mbox.imp" ;;
         menu/*.[ch]) MAPPING="menu.imp" ;;
+        mh/*.[ch]) MAPPING="mh.imp" ;;
         mixmaster/*.[ch]) MAPPING="mixmaster.imp" ;;
         mutt/*.[ch]) MAPPING="mutt.imp" ;;
         ncrypt/*.[ch]) MAPPING="ncrypt.imp" ;;
