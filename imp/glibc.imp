@@ -1,8 +1,9 @@
 [
   # Some glibc headers files cause problems
 
-  # These help on Fedora 38
+  # These help on Fedora 39
   { include: [ '"libunwind-x86_64.h"',              private, '<libunwind.h>',        public ] },
+  { include: [ '"stdbool.h"',                       private, '<stdbool.h>',          public ] },
   { include: [ '<bits/termios-c_cc.h>',             private, '<termios.h>',          public ] },
   { include: [ '<bits/types/locale_t.h>',           private, '<locale.h>',           public ] },
   { include: [ '<bits/types/mbstate_t.h>',          private, '<wchar.h>',            public ] },
