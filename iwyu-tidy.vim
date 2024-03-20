@@ -2,9 +2,14 @@ syn clear
 %!ansifilter
 %s/$//e
 g/has correct/de
-%s/.*should \(add\|remove\) these.*\n\ze\n
+%s/.*should \(add\|remove\) these.*\n\ze\n//e
 g/full include-list/norm dip
 g/^\/usr\//norm dip
+g/^gui\/mutt_curses\.h/norm dip
+g/\v^Script (started|done)/de
+g/ iwyu\.sh /de
+g/^compile_commands.json/de
+g/^exit/de
 %!cat -s
 highlight red ctermfg=red guifg=#ff0000
 syn match red "should remove these lines"
