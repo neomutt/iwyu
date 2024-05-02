@@ -1,10 +1,11 @@
 [
   # Some glibc header files cause problems
 
-  # These help on Fedora 39
+  # These help on Fedora 40
   { include: [ '"libunwind-x86_64.h"',              private, '<libunwind.h>',        public ] },
   { include: [ '"limits.h"',                        private, '<limits.h>',           public ] },
   { include: [ '"stdbool.h"',                       private, '<stdbool.h>',          public ] },
+  { include: [ '<bits/signum-arch.h>',              private, '<signal.h>',           public ] },
   { include: [ '<bits/termios-c_cc.h>',             private, '<termios.h>',          public ] },
   { include: [ '<bits/types/locale_t.h>',           private, '<locale.h>',           public ] },
   { include: [ '<bits/types/mbstate_t.h>',          private, '<wchar.h>',            public ] },
@@ -13,4 +14,6 @@
   { include: [ '<bits/types/wint_t.h>',             private, '<wchar.h>',            public ] },
   { include: [ '<gpgme-64.h>',                      private, '<gpgme.h>',            public ] },
   { include: [ '<libunwind-x86_64.h>',              private, '<libunwind.h>',        public ] },
+  { include: [ '<__stdarg_va_arg.h>',               private, '<stdarg.h>',           public ] },
+  { include: [ '<__stdarg_va_copy.h>',              private, '<stdarg.h>',           public ] },
 ]
