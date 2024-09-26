@@ -64,7 +64,6 @@ for i in "$@"; do
         mbox/*.[ch]) MAPPING="mbox.imp" ;;
         menu/*.[ch]) MAPPING="menu.imp" ;;
         mh/*.[ch]) MAPPING="mh.imp" ;;
-        mixmaster/*.[ch]) MAPPING="mixmaster.imp" ;;
         mutt/*.[ch]) MAPPING="mutt.imp" ;;
         ncrypt/*.[ch]) MAPPING="ncrypt.imp" ;;
         nntp/*.[ch]) MAPPING="nntp.imp" ;;
