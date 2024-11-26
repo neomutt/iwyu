@@ -7,6 +7,7 @@
   { include: [ '@"editor/.*"',                      private, '"editor/lib.h"',       public ] },
   { include: [ '@"expando/.*"',                     private, '"expando/lib.h"',      public ] },
   { include: [ '@"gui/.*"',                         private, '"gui/lib.h"',          public ] },
+  { include: [ '@"index/.*"',                       private, '"index/lib.h"',        public ] },
   { include: [ '@"menu/.*"',                        private, '"menu/lib.h"',         public ] },
   { include: [ '@"mutt/.*"',                        private, '"mutt/lib.h"',         public ] },
   { include: [ '@"parse/.*"',                       private, '"parse/lib.h"',        public ] },
