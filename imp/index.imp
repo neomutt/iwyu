@@ -12,6 +12,7 @@
   { include: [ '@"gui/.*"',                         private, '"gui/lib.h"',          public ] },
   { include: [ '@"menu/.*"',                        private, '"menu/lib.h"',         public ] },
   { include: [ '@"mutt/.*"',                        private, '"mutt/lib.h"',         public ] },
+  { include: [ '@"parse/.*"',                       private, '"parse/lib.h"',        public ] },
   { include: [ '@"pattern/.*"',                     private, '"pattern/lib.h"',      public ] },
   { include: [ '@"send/.*"',                        private, '"send/lib.h"',         public ] },
 

@@ -27,6 +27,7 @@
   { include: [ '@"ncrypt/.*"',                      private, '"ncrypt/lib.h"',       public ] },
   { include: [ '@"nntp/.*"',                        private, '"nntp/lib.h"',         public ] },
   { include: [ '@"notmuch/.*"',                     private, '"notmuch/lib.h"',      public ] },
+  { include: [ '@"parse/.*"',                       private, '"parse/lib.h"',        public ] },
   { include: [ '@"pattern/.*"',                     private, '"pattern/lib.h"',      public ] },
   { include: [ '@"pop/.*"',                         private, '"pop/lib.h"',          public ] },
   { include: [ '@"store/.*"',                       private, '"store/lib.h"',        public ] },
