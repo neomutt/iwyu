@@ -6,8 +6,8 @@
   { include: [ '@"config/.*"',                      private, '"config/lib.h"',       public ] },
   { include: [ '@"conn/.*"',                        private, '"conn/lib.h"',         public ] },
   { include: [ '@"core/.*"',                        private, '"core/lib.h"',         public ] },
-  { include: [ '@"email/.*"',                       private, '"email/lib.h"',        public ] },
   { include: [ '@"editor/.*"',                      private, '"editor/lib.h"',       public ] },
+  { include: [ '@"email/.*"',                       private, '"email/lib.h"',        public ] },
   { include: [ '@"expando/.*"',                     private, '"expando/lib.h"',      public ] },
   { include: [ '@"gui/.*"',                         private, '"gui/lib.h"',          public ] },
   { include: [ '@"menu/.*"',                        private, '"menu/lib.h"',         public ] },
@@ -15,6 +15,7 @@
   { include: [ '@"parse/.*"',                       private, '"parse/lib.h"',        public ] },
   { include: [ '@"pattern/.*"',                     private, '"pattern/lib.h"',      public ] },
   { include: [ '@"send/.*"',                        private, '"send/lib.h"',         public ] },
+  { include: [ '@"spager/.*"',                      private, '"spager/lib.h"',       public ] },
 
   { ref: "glibc.imp" },
   { ref: "curses.imp" },
