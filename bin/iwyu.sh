@@ -71,12 +71,14 @@ for i in "$@"; do
         pager/*.[ch]) MAPPING="pager.imp" ;;
         parse/*.[ch]) MAPPING="parse.imp" ;;
         pattern/*.[ch]) MAPPING="pattern.imp" ;;
+        pfile/*.[ch]) MAPPING="pfile.imp" ;;
         pop/*.[ch]) MAPPING="pop.imp" ;;
         postpone/*.[ch]) MAPPING="postpone.imp" ;;
         progress/*.[ch]) MAPPING="progress.imp" ;;
         question/*.[ch]) MAPPING="question.imp" ;;
         send/*.[ch]) MAPPING="send.imp" ;;
         sidebar/*.[ch]) MAPPING="sidebar.imp" ;;
+        spager/*.[ch]) MAPPING="spager.imp" ;;
         store/*.[ch]) MAPPING="store.imp" ;;
         *.[ch]) MAPPING="neomutt.imp" ;;
         *) echo "unknown: $i" ;;
