@@ -25,7 +25,9 @@
   { include: [ '@"notmuch/.*"',                     private, '"notmuch/lib.h"',      public ] },
   { include: [ '@"pager/.*"',                       private, '"pager/lib.h"',        public ] },
   { include: [ '@"parse/.*"',                       private, '"parse/lib.h"',        public ] },
+  { include: [ '@"pfile/.*"',                       private, '"pfile/lib.h"',        public ] },
   { include: [ '@"pop/.*"',                         private, '"pop/lib.h"',          public ] },
+  { include: [ '@"spager/.*"',                      private, '"spager/lib.h"',       public ] },
   { include: [ '@"store/.*"',                       private, '"store/lib.h"',        public ] },
 
   { symbol: [ "wchar_t",                            private, "<wchar.h>",            public ] },
