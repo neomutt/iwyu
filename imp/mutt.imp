@@ -1,4 +1,7 @@
 [
+  # Include one library header rather than the individual headers.
+  { include: [ '@"core/.*"',                        private, '"core/lib.h"',         public ] },
+
   { symbol: [ "regcomp",                            private, '"regex3.h"',           public ] },
   { symbol: [ "regerror",                           private, '"regex3.h"',           public ] },
   { symbol: [ "regex_t",                            private, '"regex3.h"',           public ] },
