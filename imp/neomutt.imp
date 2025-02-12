@@ -6,6 +6,7 @@
   { include: [ '@"autocrypt/.*"',                   private, '"autocrypt/lib.h"',    public ] },
   { include: [ '@"bcache/.*"',                      private, '"bcache/lib.h"',       public ] },
   { include: [ '@"browser/.*"',                     private, '"browser/lib.h"',      public ] },
+  { include: [ '@"cli/.*"',                         private, '"cli/lib.h"',          public ] },
   { include: [ '@"color/.*"',                       private, '"color/lib.h"',        public ] },
   { include: [ '@"complete/.*"',                    private, '"complete/lib.h"',     public ] },
   { include: [ '@"compmbox/.*"',                    private, '"compmbox/lib.h"',     public ] },
