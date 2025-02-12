@@ -39,6 +39,7 @@ for i in "$@"; do
         autocrypt/*.[ch]) MAPPING="autocrypt.imp" ;;
         bcache/*.[ch]) MAPPING="bcache.imp" ;;
         browser/*.[ch]) MAPPING="browser.imp" ;;
+        cli/*.[ch]) MAPPING="cli.imp" ;;
         color/*.[ch]) MAPPING="color.imp" ;;
         complete/*.[ch]) MAPPING="complete.imp" ;;
         compmbox/*.[ch]) MAPPING="compmbox.imp" ;;

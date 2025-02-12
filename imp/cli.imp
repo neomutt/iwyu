@@ -1,0 +1,10 @@
+[
+  # Include one library header rather than the individual headers.
+  { include: [ '@"core/.*"',                        private, '"core/lib.h"',         public ] },
+  { include: [ '@"mutt/.*"',                        private, '"mutt/lib.h"',         public ] },
+
+  { ref: "glibc.imp" },
+  { ref: "curses.imp" },
+  { ref: "regex.imp" },
+  { ref: "sys.imp" },
+]
