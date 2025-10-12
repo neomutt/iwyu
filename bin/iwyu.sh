@@ -31,6 +31,7 @@ BASE_DIR="${0%bin/*}"
 BASE_DIR="${BASE_DIR%/}"
 
 for i in "$@"; do
+    [ -f "$i" ] || continue
     MAPPING=""
     case "$i" in
         address/*.[ch]) MAPPING="address.imp" ;;
