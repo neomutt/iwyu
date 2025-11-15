@@ -4,6 +4,7 @@ syn clear
 %s/\s\+$//e
 g/has correct/de
 %s/.*should \(add\|remove\) these.*\n\ze\n//e
+%s/.*should add.*\n.*stdcountof.*\n\n
 g/full include-list/norm dip
 g/^\/usr\//norm dip
 g/^gui\/mutt_curses\.h/norm dip
