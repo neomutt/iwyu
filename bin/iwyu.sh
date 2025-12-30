@@ -42,6 +42,7 @@ for i in "$@"; do
         browser/*.[ch]) MAPPING="browser.imp" ;;
         cli/*.[ch]) MAPPING="cli.imp" ;;
         color/*.[ch]) MAPPING="color.imp" ;;
+        commands/*.[ch]) MAPPING="commands.imp" ;;
         complete/*.[ch]) MAPPING="complete.imp" ;;
         compmbox/*.[ch]) MAPPING="compmbox.imp" ;;
         compose/*.[ch]) MAPPING="compose.imp" ;;
@@ -59,6 +60,7 @@ for i in "$@"; do
         hcache/*.[ch]) MAPPING="hcache.imp" ;;
         helpbar/*.[ch]) MAPPING="helpbar.imp" ;;
         history/*.[ch]) MAPPING="history.imp" ;;
+        hooks/*.[ch]) MAPPING="hooks.imp" ;;
         imap/*.[ch]) MAPPING="imap.imp" ;;
         index/*.[ch]) MAPPING="index.imp" ;;
         key/*.[ch]) MAPPING="key.imp" ;;
