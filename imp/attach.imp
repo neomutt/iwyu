@@ -9,6 +9,7 @@
   { include: [ '@"gui/.*"',                         private, '"gui/lib.h"',          public ] },
   { include: [ '@"hooks/.*"',                       private, '"hooks/lib.h"',        public ] },
   { include: [ '@"index/.*"',                       private, '"index/lib.h"',        public ] },
+  { include: [ '@"key/.*"',                         private, '"key/lib.h"',          public ] },
   { include: [ '@"menu/.*"',                        private, '"menu/lib.h"',         public ] },
   { include: [ '@"mutt/.*"',                        private, '"mutt/lib.h"',         public ] },
   { include: [ '@"parse/.*"',                       private, '"parse/lib.h"',        public ] },

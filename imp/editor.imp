@@ -7,6 +7,7 @@
   { include: [ '@"core/.*"',                        private, '"core/lib.h"',         public ] },
   { include: [ '@"email/.*"',                       private, '"email/lib.h"',        public ] },
   { include: [ '@"gui/.*"',                         private, '"gui/lib.h"',          public ] },
+  { include: [ '@"key/.*"',                         private, '"key/lib.h"',          public ] },
   { include: [ '@"menu/.*"',                        private, '"menu/lib.h"',         public ] },
   { include: [ '@"mutt/.*"',                        private, '"mutt/lib.h"',         public ] },
 
