@@ -4,6 +4,7 @@
   { include: [ '@"attach/.*"',                      private, '"attach/lib.h"',       public ] },
   { include: [ '@"config/.*"',                      private, '"config/lib.h"',       public ] },
   { include: [ '@"core/.*"',                        private, '"core/lib.h"',         public ] },
+  { include: [ '@"editor/.*"',                      private, '"editor/lib.h"',       public ] },
   { include: [ '@"expando/.*"',                     private, '"expando/lib.h"',      public ] },
   { include: [ '@"gui/.*"',                         private, '"gui/lib.h"',          public ] },
   { include: [ '@"key/.*"',                         private, '"key/lib.h"',          public ] },
