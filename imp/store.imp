@@ -24,7 +24,6 @@
   { include: [ '@"nntp/.*"',                        private, '"nntp/lib.h"',         public ] },
   { include: [ '@"notmuch/.*"',                     private, '"notmuch/lib.h"',      public ] },
   { include: [ '@"pop/.*"',                         private, '"pop/lib.h"',          public ] },
-  { include: [ '@"store/.*"',                       private, '"store/lib.h"',        public ] },
 
   { symbol: [ "wchar_t",                            private, "<wchar.h>",            public ] },
 
